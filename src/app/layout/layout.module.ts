@@ -9,7 +9,7 @@ import { ProfileDropdownComponent } from './header/profile-dropdown/profile-drop
 @NgModule({
   imports: [
     CommonModule,
-    MDBBootstrapModule.forRoot(),
+    MDBBootstrapModule.forRoot()
   ],
   exports: [
     HeaderComponent

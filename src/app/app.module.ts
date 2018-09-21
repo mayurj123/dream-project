@@ -4,6 +4,10 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
+import { AuthModule } from './auth/auth.module';
+import { RouterModule } from '@angular/router';
+import { routes } from './app.routes';
+
 
 @NgModule({
   declarations: [
@@ -11,7 +15,9 @@ import { LayoutModule } from './layout/layout.module';
   ],
   imports: [
     BrowserModule,
-    LayoutModule
+    LayoutModule,
+    AuthModule,
+    RouterModule.forChild(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
