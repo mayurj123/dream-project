@@ -6,11 +6,13 @@ import { HeaderSearchComponent } from './header/header-search/header-search.comp
 import { HeaderCartComponent } from './header/header-cart/header-cart.component';
 import { ProfileDropdownComponent } from './header/profile-dropdown/profile-dropdown.component';
 import { FooterComponent } from './footer/footer.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
     CommonModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    RouterModule
   ],
   exports: [
     HeaderComponent,
