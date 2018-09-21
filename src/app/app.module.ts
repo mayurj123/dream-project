@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
 import { AuthModule } from './auth/auth.module';
 import { RouterModule } from '@angular/router';
-import { routes } from './app.routes';
+import { routes } from './app-routing.module';
 
 
 @NgModule({
@@ -17,7 +17,7 @@ import { routes } from './app.routes';
     BrowserModule,
     LayoutModule,
     AuthModule,
-    RouterModule.forChild(routes)
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
