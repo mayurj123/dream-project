@@ -5,6 +5,7 @@ import { HeaderComponent } from './header/header.component';
 import { HeaderSearchComponent } from './header/header-search/header-search.component';
 import { HeaderCartComponent } from './header/header-cart/header-cart.component';
 import { ProfileDropdownComponent } from './header/profile-dropdown/profile-dropdown.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   imports: [
@@ -14,6 +15,6 @@ import { ProfileDropdownComponent } from './header/profile-dropdown/profile-drop
   exports: [
     HeaderComponent
   ],
-  declarations: [HeaderComponent, HeaderSearchComponent, HeaderCartComponent, ProfileDropdownComponent]
+  declarations: [HeaderComponent, HeaderSearchComponent, HeaderCartComponent, ProfileDropdownComponent, FooterComponent]
 })
 export class LayoutModule { }
