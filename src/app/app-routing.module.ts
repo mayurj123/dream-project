@@ -7,6 +7,11 @@ export const routes: Routes = [
     loadChildren: './landing/landing.module#LandingModule',
     data: { preload: true, delay: true },
   },
+  {
+    path: 'home',
+    loadChildren: './home/home.module#HomeModule',
+    data: { preload: true, delay: true },
+  },
     {
       path: 'auth',
       loadChildren: './auth/auth.module#AuthModule',
