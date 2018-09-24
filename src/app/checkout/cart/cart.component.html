@@ -1,4 +1,18 @@
-<p>
-  cart works!
-</p>
-  <app-empty-cart></app-empty-cart>
+<!-- <app-empty-cart></app-empty-cart> -->
+
+<div class="cart-section" *ngIf="!isMobile" style="margin-left: 20px;margin-right: 20px;">
+    <div *ngIf="(totalCartItems$) > 0 else emptyCart" class="row">
+        <div class="left col-md-8">
+            <div class="prod-set">
+                <app-cart-item-list></app-cart-item-list>
+            </div>
+        </div>
+        <div class="right col-md-4">
+            <app-order-total-summary></app-order-total-summary>
+        </div>
+    </div>
+
+    <ng-template #emptyCart>
+        <app-empty-cart></app-empty-cart>
+    </ng-template>
+</div>
