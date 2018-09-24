@@ -7,7 +7,7 @@ import { LoginComponent } from './components/login/login.component';
 // ];
 
 export const AuthRoutes = [
-   { path: '', redirectTo: 'login', pathMatch: 'full' },
+  //  { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent }
 ];
 
