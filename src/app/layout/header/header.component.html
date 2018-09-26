@@ -8,7 +8,7 @@
     </div>
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link waves-light" (click) = "login()" mdbWavesEffect>Login/Signup</a>
+        <a class="nav-link waves-light" (click) = "openLoginModal(content)" mdbWavesEffect>Login/Signup</a>
       </li>
       <app-header-cart></app-header-cart>      
       <app-profile-dropdown></app-profile-dropdown>
@@ -16,3 +16,29 @@
   </links>
 </mdb-navbar>
 <!--/.Navbar-->
+
+
+<ng-template #content let-modal >
+  <div class="modal-header">
+    <h4 class="modal-title">Login</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body mx-3">
+    <div class="md-form mb-5">
+      <i class="fa fa-envelope prefix grey-text"></i>
+      <input mdbInputDirective type="email" id="defaultForm-email" class="form-control validate">
+      <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
+  </div>
+
+  <div class="md-form mb-4">
+      <i class="fa fa-lock prefix grey-text"></i>
+      <input mdbInputDirective type="password" id="defaultForm-pass" class="form-control validate">
+      <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
+  </div>
+  </div>
+  <div class="modal-footer d-flex justify-content-center">
+      <button class="btn btn-default" (click) = "login()">Login</button>
+  </div>
+</ng-template>
