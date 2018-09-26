@@ -8,12 +8,14 @@ import { ProfileDropdownComponent } from './header/profile-dropdown/profile-drop
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { CategoriesComponent } from './categories/categories.component';
+import { AuthModule } from '../auth/auth.module';
 
 @NgModule({
   imports: [
     CommonModule,
     MDBBootstrapModule.forRoot(),
-    RouterModule
+    RouterModule,
+    AuthModule
   ],
   exports: [
     HeaderComponent,
