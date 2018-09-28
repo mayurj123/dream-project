@@ -1,4 +1,5 @@
 import { Routes } from "@angular/router";
+import { AuthGuard } from "./_guards/auth.guard";
 
 
 export const routes: Routes = [
@@ -20,6 +21,7 @@ export const routes: Routes = [
     {
       path: 'checkout',
       loadChildren: './checkout/checkout.module#CheckoutModule',
+      canActivate: [AuthGuard],
       data: { preload: true, delay: true },
     }
 ]

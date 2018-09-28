@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-cart',
@@ -13,5 +13,17 @@ export class CartComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  @HostListener('window:scroll') onScroll() {
+    var header = document.getElementById("orderSummary");
+    var sticky = header.offsetTop;
+
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+
+  };
 
 }
