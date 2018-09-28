@@ -7,6 +7,7 @@ import { LayoutModule } from './layout/layout.module';
 import { AuthModule } from './auth/auth.module';
 import { RouterModule } from '@angular/router';
 import { routes } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 //import { LandingModule } from './landing/landing.module';
 
@@ -21,7 +22,8 @@ import { routes } from './app-routing.module';
     AuthModule,
  
    // LandingModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

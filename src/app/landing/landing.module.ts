@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
 import {LandingRoute as landingRoute} from './landing-routing.module'
 import { LandingComponent } from './landing.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-import { ProductListComponent } from './product-list/product-list.component';
+import { ProductListComponent } from './lp-product-list/product-list.component';
 @NgModule({
   imports: [
     CommonModule,
